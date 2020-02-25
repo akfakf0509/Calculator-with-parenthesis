@@ -1,18 +1,10 @@
 #pragma once
-#include <stack>
+#include <string>
 
-template<typename T>
-class Calculator
-{
-	std::stack<T> stack;
-public:
-	Calculator();
-	~Calculator();
+using namespace std;
 
-	bool IsOperand(char ch);
-	bool IsOperator(char ch);
-
-	int Prec(char ch);
-
-	bool InfixToPostfix(const char* exp);
-};
+string ExchangePostFix(string);
+int ExpressionPostFix(string);
+bool IsOperator(char);
+bool IsOperand(char);
+int OperatorLevel(char);
